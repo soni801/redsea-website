@@ -1,0 +1,76 @@
+/* STYLESHEET TABLE OF CONTENTS
+    1 Declarations
+        1.1 Fonts
+        1.2 Colors
+    2 Sections
+        2.1 Body
+        2.2 Logo
+        2.3 Text
+    3 Animations
+ */
+
+// 1.1 Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// 1.2 Colors
+$background: #111111;
+$accent: #550000;
+$primary: #ff0000;
+$light: #ffffff;
+
+// 2.1 Body
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    color: $light;
+    background: $background;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+// 2.2 Logo
+div
+{
+    width: 40rem;
+    aspect-ratio: 1;
+    margin: -6rem;
+    background: linear-gradient(to top, $accent, $primary);
+    mask-image: url("/assets/logo.svg");
+    -webkit-mask-image: url("/assets/logo.svg");
+    transform: scale(.85);
+    opacity: 0;
+    animation: in .9s ease forwards .2s;
+}
+
+// 2.3 Text
+h1
+{
+    margin: 0;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(.5em);
+    animation: in .5s ease forwards .35s;
+}
+
+h3
+{
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(.5em);
+    animation: in .5s ease forwards .5s;
+}
+
+// 3 Animations
+@keyframes in
+{
+    to
+    {
+        transform: none;
+        opacity: 1;
+    }
+}
