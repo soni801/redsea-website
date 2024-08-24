@@ -30,13 +30,14 @@ body
     color: $light;
     background: $background;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
     margin: 0;
 }
 
 // 2.2 Logo
 div
 {
-    width: 40rem;
+    width: clamp(200px, 100vw, 40rem);
     aspect-ratio: 1;
     margin: -6rem;
     background: linear-gradient(to top, $accent, $primary);
